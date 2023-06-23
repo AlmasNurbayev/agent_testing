@@ -3,14 +3,14 @@
 После запуска каждая точка будет проверяться исходя из параметров конфига.
 
 [{
-  app: string,  // name of service
-  name: string, // name of endpoint
-  enable: boolean, // skipped if false 
-  protocol: string, // rest or other
-  url?: string, // first part of url
-  method?: string,  // http-method - post, get, delete
-  endpoint?: string,  // second part of url
-  endpointAuth?: string,  // for PAG function - url for post 
+  app: string,  // name of service  
+  name: string, // name of endpoint  
+  enable: boolean, // skipped if false  
+  protocol: string, // rest or other  
+  url?: string, // first part of url  
+  method?: string,  // http-method - post, get, delete  
+  endpoint?: string,  // second part of url  
+  endpointAuth?: string,  // for PAG function - url for post  
   endpointGet?: string,   // for PAG function - url for get 
   field_jwt?: string, // for PAG function - name of field store jwt
   post_body: any, // body for post request. If empty - must be {}
