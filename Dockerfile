@@ -10,12 +10,12 @@ WORKDIR /app
 COPY package*.json ./
 #COPY ["package.json", "package-lock.json*", "./"]
 
-RUN npm install --production
-RUN npx prisma migrate deploy
+RUN npm install
+#RUN npx prisma migrate deploy
 
 COPY . .
 
 # RUN npm run create - скрипт запускается в контейнере postgres
 
-CMD ["npm", "run", "index"]
+CMD ["npm", "run", "start"]
 

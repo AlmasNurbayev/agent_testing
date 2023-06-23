@@ -1,22 +1,8 @@
 version: '3.8'
 services:
-  db:
-    hostname: postgres
-    image: postgres:15.2-alpine
-    restart: always
-    environment:
-      POSTGRES_DB: "kofd"
-      POSTGRES_USER: "postgres"
-      POSTGRES_PASSWORD: "postgres"
-      PGDATA: "/var/lib/postgresql/data/pgdata"
-    #ports:
-    #  - 5432:5432
-    volumes: 
-      - pgdata:/var/lib/postgresql/data
-      - ./create.sql:/docker-entrypoint-initdb.d/create_tables.sql 
   bot:
-    env_file: .env
-    container_name: js-kofd
+    #env_file: configs/.env
+    container_name: agent_testing
     build:
         context: .
         #dockerfile: Dockerfile
@@ -30,13 +16,13 @@ services:
       #- app:/app/node_modules
       #- app:/app/logs
     # сервис, от которого зависит работоспособность данного сервиса
-    depends_on:
-      - db
+#    depends_on:
+#      - db
     restart: always
     # команда для запуска сервера для разработки
-    command: npm run index
+ #   command: npm run start
 
 
 volumes:
-    pgdata:
+#    pgdata:
     app:
