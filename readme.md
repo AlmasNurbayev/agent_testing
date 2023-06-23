@@ -11,22 +11,22 @@
   method?: string,  // http-method - post, get, delete  
   endpoint?: string,  // second part of url  
   endpointAuth?: string,  // for PAG function - url for post  
-  endpointGet?: string,   // for PAG function - url for get 
-  field_jwt?: string, // for PAG function - name of field store jwt
-  post_body: any, // body for post request. If empty - must be {}
-  response_code: number,  // success http code
-  response_type?: string, // arr or obj
-  response_details?: string,  // required field
-  response_error_path?: string, // field with error for alarm
-  response_data_path?: string,  // must be data or more
-  message_error?: string, // message for sended of transport
-  timeout: number,  // for axios
-  need_result?: boolean, // что считается успехом
-  status?: boolean, // matching response and need result
-  transport?: string[], // type of transport
-  transport_address?: string[], // address list
-  repeat: number, // interval for repeat in ms
-  last_check?: Date, // not put manually, date of last check
+  endpointGet?: string,   // for PAG function - url for get  
+  field_jwt?: string, // for PAG function - name of field store jwt  
+  post_body: any, // body for post request. If empty - must be {}  
+  response_code: number,  // success http code  
+  response_type?: string, // arr or obj  
+  response_details?: string,  // required field  
+  response_error_path?: string, // field with error for alarm  
+  response_data_path?: string,  // must be data or more  
+  message_error?: string, // message for sended of transport  
+  timeout: number,  // for axios  
+  need_result?: boolean, // что считается успехом  
+  status?: boolean, // matching response and need result  
+  transport?: string[], // type of transport  
+  transport_address?: string[], // address list  
+  repeat: number, // interval for repeat in ms  
+  last_check?: Date, // not put manually, date of last check  
 }]
 
 Из транспортов доступны:
